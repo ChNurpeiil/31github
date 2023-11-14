@@ -1,7 +1,22 @@
 package week9;
 
 import java.util.Arrays;
-
+//Write a method called countChar() that takes a String array and a char as parameters. The method should iterate through each String element in the array and count the number of times the given char appears in each string. It should return an integer array with the length of the string array from the parameters (int[stringArray.length]) with the count of the given char in each String element.
+//
+//If the String array is empty return an array with values -1.
+//
+//Example:
+//
+//Return type: int[]
+//
+//Params:
+//
+//String arr = {"hello", "world", "how", "are", "you"}
+//char ch = '0'
+//
+//Return:
+//
+//{1, 2, 1, 0, 1}
 public class W6P1 {
     public static void main(String[] args) {
         int[] result1 = countChar(new String[]{"hello", "world", "how", "are", "you"}, 'o');
