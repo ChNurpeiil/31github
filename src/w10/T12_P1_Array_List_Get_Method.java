@@ -3,7 +3,7 @@ package w10;
 import java.util.ArrayList;
 import java.util.List;
 
-public class T12_P1_Array_List_Cet_Method {
+public class T12_P1_Array_List_Get_Method {
     /*
     Description: Write a method called getListElement() that takes an ArrayList of integers and an index as input. The method should return the element at the specified index in the list.
 

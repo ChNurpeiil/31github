@@ -3,7 +3,7 @@ package w10;
 import java.util.ArrayList;
 import java.util.List;
 
-public class T12_P2_Array_List_Cet_Method {
+public class T12_P2_Array_List_Get_Method {
     /*
     Create a Java static method named getMovieTitle() for managing a movie night queue. The method should take 2 parameters: a list of movies in the form of a List<String> and an index in range from 0 to last index of a list as an int. The program should display the movie title.
 
