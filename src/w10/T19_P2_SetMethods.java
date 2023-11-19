@@ -1,11 +1,10 @@
 package w10;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
-public class T20_P1_SetMethods {
+public class T19_P2_SetMethods {
     public static void main(String[] args) {
         ArrayList<String> fruits = new ArrayList<>();
         fruits.add("apple");
@@ -14,11 +13,11 @@ public class T20_P1_SetMethods {
         fruits.add("banana");
         fruits.add("avocado");
 
-        HashSet<String> str =returnHash(fruits);
+        Set<String> str =returnTreeSet(fruits);
         System.out.println(str);
     }
-    public static HashSet<String> returnHash(ArrayList<String> input){
-        HashSet<String> str = new HashSet<>(input);
+    public static Set<String> returnTreeSet(ArrayList<String> input){
+        TreeSet<String > str = new TreeSet<>(input);
         return str;
     }
 }
