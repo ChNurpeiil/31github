@@ -46,8 +46,7 @@ public class W14P1 {
         int number = sc.nextInt();
         do {
             if (number <= 0) {
-                System.out.println("Please enter a positive integer.");
-                System.out.println("Enter a positive integer:");
+                System.out.println("Error: Enter a positive integer:");
                 number = sc.nextInt();
             } else {
                 System.out.println("Valid number: " + number);

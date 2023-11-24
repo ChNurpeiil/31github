@@ -35,7 +35,6 @@ public class W12P2 {
     passwordForm();
     }public static void passwordForm(){
         Scanner sc = new Scanner(System.in);
-
         while (true) {
             System.out.println("Enter your password.");
             String password = sc.nextLine();
