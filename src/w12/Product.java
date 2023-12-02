@@ -3,17 +3,17 @@ package w12;
 import java.util.ArrayList;
 
 public class Product {
-    private static int count =0;
-    private int productId ;
+    private static int count = 0;
+    private int productId;
     private String name;
-    private double price ;
+    private double price;
 
     public Product(String name, double price) {
         this.productId = count++;
         this.name = name;
-        if (price < 0){
+        if (price < 0) {
             System.out.println("Price cannot be negative.");
-        }else{
+        } else {
             this.price = price;
         }
 
@@ -40,14 +40,15 @@ public class Product {
     }
 
     public void setPrice(double price) {
-        if (price < 0){
+        if (price < 0) {
             System.out.println("Price cannot be negative.");
-        }else {
+        } else {
             this.price = price;
         }
     }
 }
-class Customer{
+
+class Customer {
     private static int count = 0;
     private int customerId;
     private String name;
@@ -81,25 +82,25 @@ class Customer{
     }
 
     public void setEmail(String email) {
-        if (!isValidEmail(email)){
+        if (!isValidEmail(email)) {
             System.out.println("Invalid email format.");
-        }else{
+        } else {
             this.email = email;
         }
     }
 
-    private boolean isValidEmail(String email){
-        if (email.contains("@")&& email.contains(".")){
+    private boolean isValidEmail(String email) {
+        if (email.contains("@") && email.contains(".")) {
             int atIndex = email.indexOf("@");
             int dotIndex = email.indexOf(".");
-            return atIndex< dotIndex && dotIndex < email.length()-1;
+            return atIndex < dotIndex && dotIndex < email.length() - 1;
         }
         return false;
     }
 }
 
-class Order{
-    private int count =0;
+class Order {
+    private int count = 0;
     private int orderId;
     private Customer customer;
     private ArrayList<Product> products;
@@ -108,23 +109,28 @@ class Order{
         this.customer = customer;
         this.products = new ArrayList<>();
     }
-    public void addProduct (Product product){
+
+    public void addProduct(Product product) {
         products.add(product);
     }
-    public void removeProduct(int productId){
+
+    public void removeProduct(int productId) {
         products.removeIf(p -> p.getProductId() == productId);
     }
-    public double getTotalPrice(){
-        double totalPrice =0;
-        for (Product product:products){
-            totalPrice+=product.getPrice();
+
+    public double getTotalPrice() {
+        double totalPrice = 0;
+        for (Product product : products) {
+            totalPrice += product.getPrice();
         }
         return totalPrice;
     }
-    public Customer getCustomer(){
+
+    public Customer getCustomer() {
         return customer;
     }
-    public void setCustomer(Customer customer){
+
+    public void setCustomer(Customer customer) {
         this.customer = customer;
     }
 
